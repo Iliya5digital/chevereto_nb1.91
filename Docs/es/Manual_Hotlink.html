@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chevereto, Evitar el hotlinkg a las imagenes</title>
+<meta http-equiv="Content-language" content="es" />
+<link rel="stylesheet" href="../doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="../doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="../doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1"><h1>Evitar el hotlinkg a las imagenes</h1></div>
+
+<div id="contenido">
+
+	<div class="migas_de_pan"><a href="../Bienvenido.html">Documentación</a> > <a href="Manuales.html">Manuales</a> > Manual Hotlinking</div>
+	
+    <div>
+    	<h2>Hotlinking</h2>
+        <p>Al momento de subir una imagen en tu Chevereto, esta se puede compartir. Lo cual es muy bueno y es justamente la finalidad de este script. Lamentablemente, existen muchos sitios que se aprovechan de esto y puede que utilicen tu hosting como almacén de sus propias imagenes. Esto puede ser muy destructivo si lo hacen abusivamente y sin que esto signifique una gratificación para ti. </p>
+    </div>
+    
+    <div>
+    	<h2>Venimos en tu ayuda</h2>
+        <p>Por suerte, es posible evitar a estos indeseables invitados. Con simples reglas de .htaccess puedes evitar el robo de ancho de banda y permitir que sitios pueden beneficiarse con tu (ahora) hosting de imagenes. Lo que hacemos es establecer una lista de sitios que pueden insertar libremente tus imagenes y quienes no pueden hacerlo, para estos últimos mostramos una imagen de error.</p>
+    </div>
+    
+    <div>
+    	<h2>Permitir solo que algunos sitios accedan a tus imagenes</h2>
+        <p>Agrega en cualquier parte del archivo .htaccess lo siguiente:</p>
+        <textarea readonly="readonly" rows="4">RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?dev.chevereto.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?godlike.cl [NC]
+RewriteRule images/.*\.(jpg|png|bmp|gif)$ http://dev.chevereto.com/site-img/error.gif [NC,R,L]</textarea>
+		<p>Este código permite el acceso a los dominios indicados, sigue el mismo patrón para los que quieras establecer a tu gusto. Notese que deniega el acceso a las imagenes en "images", en otras palabras, permitimos que usen el thumb para enlazar las imagenes pero no que las muestren directamente.</p>
+        <p>Ahora, si quieres negar el acceso completo a todas tus imagenes, incluso los thumbs, debes alteras la ultima parte del código para que quede algo así:</p>
+        <textarea readonly="readonly" rows="1"># denegar acceso a todas las imagenes
+RewriteRule  .*\.(jpg|png|bmp|gif)$ http://chevereto.com/demo_error.gif [NC,R,L]</textarea>
+    </div>
+    
+    <div>
+   	  <h2>La imagen de error</h2>
+        <p>Incluimos una imagen error de demostración, la puedes ver en <a href="../../Upload/site-img/error.gif">site-img/error.gif</a>. La imagen de error puede ser lo que tu quieras, lo único que debes tener en cuenta es que en el código de arriba debes poner la url de la imagen de error. Notese que debes incluir tu propio dominio en la lista de admitidos por que de lo contrario la regla entra en un loop y te bloquea a ti mismo.</p>
+    </div>
+    
+    
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chevereto, Manuales</title>
+<meta http-equiv="Content-language" content="es" />
+<link rel="stylesheet" href="../doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="../doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="../doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1"><h1>Manual Bookmarklet</h1></div>
+
+<div id="contenido">
+
+	<div class="migas_de_pan"><a href="../Bienvenido.html">Documentación</a> > <a href="Manuales.html">Manuales</a> > Manual Bookmarklet</div>
+	
+    <div>
+    	<h2>¿Que es un Bookmarklet y que hace este?</h2>
+        <p>Según la poderosa <a href="http://es.wikipedia.org/wiki/Bookmarklet" target="_blank">Wikipedia</a>: Un bookmarklet es un marcador que, en lugar de apuntar a una dirección URL, hace referencia a una pequeña porción de código JavaScript para ejecutar ciertas tareas automáticamente.</p>
+        <p>Este Bookmarklet con un click permite ver todas las imagenes en una determinada pagina web, posteriormente con un simple click las hospedaras en tu (ahora) propio hosting de imágenes.</p>
+    </div>
+    
+    <div>
+    	<h2>Como hacerlo</h2>
+        <p>Es muy simple, basta con que edites el siguiente código:</p>
+        <textarea readonly="readonly" rows="5">javascript:t='';for(var n=0;n<document.images.length;n++){t+='<a href=http://dev.chevereto.com/?url='+document.images[n].src+' target=\'_blank\' style=\'float: left; margin: 1em;\'><img border=0 src='+document.images[n].src+' /></a><br />'};if(t!=''){document.write('\<p\><div style=\'font-family: Arial, Helvetica, sans-serifl; font-size: 1.5em; background: #FFF; display: block; padding: .5em; margin: 0em auto 2em auto; border: 1px solid #CCC;\'>Pincha las imágenes y se subirán a DEV Chevereto <span style=\'color: #CCC;\'>en nueva pestaña</span></div>\</p\>'+t+'');void(document.close())}else{alert('No hay imágenes!')}</textarea>
+    </div>
+    
+    <div>
+    	<h2>Como ofrecerlo a tus usuarios</h2>
+        <p>Es tan simple como crear un enlace apuntando a el código anterior. El texto de tu enlace sera el que quedara en el marcador del usuario, incluso puede ser una imagen y el texto correspondiente es el del atributo alt de la misma. Por ejemplo, si arrastras el siguiente enlace: <a href="javascript:t='';for(var n=0;n&lt;document.images.length;n++){t+='&lt;a href=http://dev.chevereto.com/?url='+document.images[n].src+' target=\'_blank\' style=\'float: left; margin: 1em;\'&gt;&lt;img border=0 src='+document.images[n].src+'&gt;&lt;/a&gt;&lt;br&gt;'};if(t!=''){document.write('\&lt;p\&gt;&lt;div style=\'font-family: Arial, Helvetica, sans-serifl; font-size: 1.5em; background: #FFF; display: block; padding: .5em; margin: 0em auto 2em auto; border: 1px solid #CCC;\'&gt;Pincha las imágenes y se subirán a DEV Chevereto &lt;span style=\'color: #CCC;\'&gt;en nueva pestaña&lt;/span&gt;&lt;/div&gt;\&lt;/p\&gt;'+t+'');void(document.close())}else{alert('No hay imágenes!')}">Subir a Dev Chevereto</a> a tu barra de marcadores, lo puedes ver funcionando en el acto.</p>
+    </div>
+
+</div>
+
+</body>
+
+</html>
