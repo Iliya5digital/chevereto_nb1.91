@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Chevereto</title>
+<meta http-equiv="Content-language" content="es" />
+<link rel="stylesheet" href="doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1">
+  <h1>Nightly Build 1.91!</h1></div>
+
+<div id="contenido">
+	
+    <div>
+    	<h2>Welcome to Chevereto NB 1.91</h2>
+        <p>Thank you for downloading the latest version of Chevereto, in this release the goal was fix script issues and create a new Firefox Extension. You can see all the changes in the <a href="en/Version_Notes.html">version notes</a>.</p>
+    </div>
+    <div>
+    	<h2>Requirements</h2>
+        <p>Chevereto  runs on almost any server with PHP5 support. Along with this, you need to have  <a href="http://php.net/curl">cURL</a> and  <a href="http://php.net/curl">GD</a> library. These requirements are very common for most commercial servers (even on free hostings).</p>
+    </div>  
+    <div>
+    	<h2>Quick Install</h2>
+        <p>Go to the &quot;<a href="../Upload/">Upload</a>&quot; folder and  edit  &quot;<a href="../Upload/config.php">config.php</a>&quot; within the parameters of your needs. Finally upload the contents of <a href="../Upload/">this folder</a> to your server. Thats all ... really.</p>
+	</div>
+	<div>
+		<h2>Problems with the installation</h2>
+		<p>Try editing the file &quot;<a href="../Upload/config.php">config.php</a>&quot;, if you are sure that the configuration is correct try to set CHMOD 777 to the folders inside "<a href="../Upload/up">up</a>", CHMOD 777 to "<a href="../Upload/images">images</a>" and also"<a href="../Upload/thumbs">thumbs</a>". Please notice that this represents a huge security risk (<a href="http://drupal.org/node/100810" target="_blank">more info</a>).. Still no luck?, enable debug and swift notify this error in the <a href="http://chevereto.com/foro/" target="_blank">development forum</a>.</p>
+	</div>
+  <div>
+	<h2>Not so common issues...</h2>
+	  <p>In some servers (bad ones) they don't have a right config of the <em><strong>$_SERVER</strong></em> variables.If the script doesn't work and the debug says that there is dome about &quot;can't change directory&quot; is likely that your server has problems with this variables. So, you must fix <strong>$DOM_SCRIPT</strong>  in &quot;<a href="../Upload/config.php">config.php</a>&quot;. Config.php says how you must edit this variables.</p>
+	</div>
+	<div>
+		<h2>Manuals</h2>
+		<p>We have included <a href="en/Manuals.html">manuals</a> to create your own <a href="http://chevereto.com/foro/topic620-new-firefox-extension-easy-to-create-and-works-in-ff-4.html">Firefox extension</a>,  <a href="en/Bookmarklet_Manual.html">Bookmarklet</a> and avoid <a href="en/Hotlink_Manual.html">Hotlinking</a>.</p>
+	</div>
+	<div>
+		<h2>Get Involved with Chevereto</h2>
+		<p>If you use Chevereto and you like it, you may want to help us spreading our initiative. You have many ways to do it, your imagination is the limit. You can find more ways to contribute on our <a href="http://chevereto.com/" target="_blank">website</a>.</p>
+    </div>
+    <div>
+    	<h2>Copyrights</h2>
+        <p>Chevereto is released under the <abbr title="GNU Public License">GPL</abbr>. <a href="../license.txt">license.txt</a></p>
+    </div>
+    
+
+</div>
+
+</body>
+
+</html>

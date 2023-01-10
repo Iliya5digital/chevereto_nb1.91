@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bienvenido a Chevereto</title>
+<meta http-equiv="Content-language" content="es" />
+<link rel="stylesheet" href="doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1">
+  <h1>Nightly Build 1.91!</h1></div>
+
+<div id="contenido">
+	
+    <div>
+    	<h2>Bienvenido a Chevereto NB 1.91</h2>
+        <p>Gracias por descargar la ultima versión de Chevereto, en esta version se buscó solucionar problemas relacionados con el script en general y ademas crear una nueva extensión para Firefox. Puedes ver todos los cambios en las <a href="es/Notas_de_la_version.html">notas de la versión</a>.</p>
+    </div>
+    <div>
+    	<h2>Requerimientos</h2>
+        <p>Chevereto corre  en practicamente cualquier servidor con soporte PHP5. Junto con esto, necesitaras tener instalada la librería <a href="http://php.net/curl" target="_blank">cURL</a> y <a href="http://php.net/gd" target="_blank">GD</a>. Estos requerimientos son bien simples y comunes en la mayoría de los servidores comerciales existentes (incluso en hostings gratuitos).</p>
+    </div>  
+    <div>
+    	<h2>Instalación rápida</h2>
+        <p>Dirigete a la carpeta &quot;<a href="../Upload/">Upload</a>&quot; que viene en el zip que acabas de descomprimir y edita el archivo "<a href="../Upload/config.php">config.php</a>" de acuerdo con los parametros de tu servidor.  Finalmente sube el contenido de <a href="../Upload/">esta carpeta</a> a tu servidor. Eso es todo... de verdad.</p>
+    </div>
+<div>
+    	<h2>Problemas con la instalación</h2>
+        <p>Si tienes problemas con la instalación, probablemente el script te dira que es. intenta revisando el archivo "<a href="../Upload/config.php">config.php</a>", si estas seguro que la configuración esta correcta, intenta setear CHMOD 777 a las carpetas contenidas en "<a href="../Upload/up">up</a>", la carpeta "<a href="../Upload/images">images</a>" y finalmente la carpeta"<a href="../Upload/thumbs">thumbs</a>". Ten en cuenta que esto representa un importante riezgo de seguridad (<a href="http://drupal.org/node/100810" target="_blank">más información</a>). Si aun así no hay suerte, <strong>habilita el debug</strong> y ve si no es un error de configuración. Si no pasa nada, notificanos este error en el <a href="http://chevereto.com/foro/" target="_blank">foro de desarrollo</a>.</p>
+    </div>
+    <div>
+   	  <h2>Problemas no tan comunes</h2>
+        <p>Existen servidores (malos) que tienen limitadas variables importantes de <em><strong>$_SERVER</strong></em> y demas. Si el script no te funciona el ye debug te habla sobre &quot;no puedo cambiar de directorio&quot; es muy probable que el servidor tenga bloqueadas o incorectas estas variables. Al respecto, la variable a corregir es <strong>$DOM_SCRIPT</strong> en &quot;<a href="../Upload/config.php">config.php</a>&quot;, en el mismo archivo se explica como cambiarla manualmente.</p>
+    </div>
+    <div>
+    	<h2>Manuales</h2>
+        <p>Hemos incluido los <a href="es/Manuales.html">manuales</a> para que puedas crear tu <a href="http://chevereto.com/foro/topic620-new-firefox-extension-easy-to-create-and-works-in-ff-4.html">extensión para Firefox</a>, <a href="es/Manual_Bookmarklet.html">Bookmarklet</a> y evites el <a href="es/Manual_Hotlink.html">Hotlinking</a>.</p>
+    </div>
+    <div>
+   	  <h2>Involucrate con Chevereto</h2>
+        <p>Si usas Chevereto y este te gusta, nos ayudas mucho si difundes nuestra iniciativa. Tienes muchas opciones de hacerlo, tu imaginación es el limite. Puedes encontrar más formas de colaborarnos en <a href="http://chevereto.com/colaboranos/" target="_blank">nuestra pagina web</a>.</p>
+    </div>
+    <div>
+    	<h2>Copyrights</h2>
+        <p>Chevereto esta realizado bajo la licencia GPL. <a href="../license.txt">license.txt</a></p>
+    </div>
+    
+
+</div>
+
+</body>
+
+</html>
