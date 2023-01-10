@@ -1,0 +1,117 @@
+/* CSS CHEVERETO DOCS 1.0 
+   por Godlike Studio (http://godlikestudio.com/)
+   - Rodolfo Berrios
+*/
+
+body, h1, h2, p, li, ul { margin: 0; padding: 0; }
+
+body {
+	min-height: 100%;
+	padding-bottom: 30px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #FFF;
+	color: #333;
+}
+
+a { text-decoration: none; outline: 0; color: #2B97C6; }
+a:hover { color: #164B63; }
+a img { border: 0; }
+
+h2, h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#top {
+	background: #00B8E6 url(bkg_top_btn.png) repeat-x bottom;
+	height: 83px;
+}
+
+#in_top , #h1 h1, #contenido {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#in_top {
+	height: 83px;
+	background: url(fondo_in_top.png) no-repeat;
+}
+	#in_top img {
+		width: 462px;
+		position: absolute;
+		left: 50%;
+		margin-left: -231px;
+		top: 10px;
+	}
+
+#h1 {
+	background: url(fondo_h1.png) repeat-x;
+	height: 93px;
+	border-bottom: 1px solid #D2E6F9;
+	text-align: center;
+}
+	#h1 h1 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style: italic;
+		font-size: 18pt;
+		color: #00B6E5;
+		height: 34px;
+		position: relative;
+		top: 42px;
+		margin: 0 auto;
+	}
+
+#contenido {
+	width: 780px;
+	margin: 40px auto 20px auto;
+}
+	#contenido div {
+		margin-bottom: 35px;
+	}
+		#contenido div h2 {
+			font-size: 14pt;
+			margin-bottom: 3px;
+		}
+			#contenido div h2 span {
+				font-size: 9pt;
+				font-weight: normal;
+				color: #666;
+				margin-left: 5px;
+			}
+		#contenido div p {
+			font-size: 10pt;
+			margin-bottom: 15px;
+			line-height: 140%;
+		}
+		#contenido div ul {
+			font-size: 10pt;
+			margin: 10px 20px 0 0;
+			list-style: none;
+		}
+			#contenido div ul li {
+				margin: 5px 0;
+			}
+
+div.migas_de_pan {
+	font-size: 9pt;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 25px !important;
+}
+
+
+textarea {
+	width: 100%;
+	background: #F9F9F9;
+	border: 1px solid #E6E6E6;
+	padding: 8px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 8.5pt;
+	margin-bottom: 15px;
+}
+
+div.sub {
+	margin-left: 35px;
+}
+	div.sub h2 {
+		font-size: 11pt !important;
+	}
