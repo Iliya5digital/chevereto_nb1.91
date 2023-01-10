@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chevereto, Avoid image Hotlinking</title>
+<meta http-equiv="Content-language" content="en" />
+<link rel="stylesheet" href="../doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="../doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="../doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1"><h1>Avoid image Hotlinking</h1></div>
+
+<div id="contenido">
+
+	<div class="migas_de_pan"><a href="../Welcome.html">Documentation</a> > <a href="Manuals.html">Manuals</a> > Avoid image Hotlinking</div>
+	
+    <div>
+    	<h2>Hotlinking</h2>
+        <p>When you upload an image to your Chevereto, this image can be shared. Which is very good and it is precisely the purpose of this script. Unfortunately, there are many sites that take advantage of this and can use your hosting as a store hosting for their own images. This can be very destructive if they  abuse of your service.</p>
+    </div>
+    
+    <div>
+    	<h2>We come to your aid!</h2>
+        <p>It's possible to prevent these unwanted guests with simple .htaccess rules you can prevent the bandwidth theft and set which sites can use from your image hosting. What we do is establish a list of sites that can freely insert your images and those who can't.</p>
+    </div>
+    
+    <div>
+    	<h2>Allow just to some sites  to your images</h2>
+        <p>Add  in the .htaccess file the following:</p>
+        <textarea readonly="readonly" rows="4">RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?dev.chevereto.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?godlike.cl [NC]
+RewriteRule images/.*\.(jpg|png|bmp|gif)$ http://dev.chevereto.com/site-img/error.gif [NC,R,L]</textarea>
+		<p>This code allows access to the domains listed, follow the same pattern for those who want to establish your own. Note that denies access to the images in "images", in other words, we just allow to use of the thumb to link the images.</p>
+        <p>Now, if you want to complete deny  access to all your images, including the thumbs, you must change the last part of the code to make it something like this:</p>
+        <textarea readonly="readonly" rows="1"># deny all image access
+RewriteRule  .*\.(jpg|png|bmp|gif)$ http://chevereto.com/demo_error.gif [NC,R,L]</textarea>
+    </div>
+    
+    <div>
+   	  <h2>The "error" image</h2>
+        <p>We include a demo of the image error, you can see it in <a href="../../Upload/site-img/error.gif">site-img/error.gif</a>. This image may be anything you want, all you have to remember is that in the code above you should put the url of the image to show. Note that you must include your own domain name in the list, because the rule would go into a loop and you will be hanging yourself.</p>
+    </div>
+    
+</div>
+
+</body>
+
+</html>

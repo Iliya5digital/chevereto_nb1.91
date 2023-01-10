@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chevereto, Bookmarklet manual</title>
+<meta http-equiv="Content-language" content="en" />
+<link rel="stylesheet" href="../doc_img/estilo.css" type="text/css" />
+<link rel="shortcut icon" href="../doc_img/favicon.ico" type="image/x-icon" />
+
+<body>
+
+<div id="top"><div id="in_top"><img src="../doc_img/logo_chevereto.png" alt="" /></div></div>
+
+<div id="h1"><h1>Bookmarklet manual</h1></div>
+
+<div id="contenido">
+
+	<div class="migas_de_pan"><a href="../Welcome.html">Documentation</a> > <a href="Manuals.html">Manuals</a> > Bookmarklet manual</div>
+	
+    <div>
+    	<h2>What is a Bookmarklet and what does this one?</h2>
+        <p>According to the powerful <a href="http://en.wikipedia.org/wiki/Bookmarklet" target="_blank">Wikipedia</a>: A bookmarklet is an applet, a small computer application, stored as the URL of a bookmark in a web browser or as a hyperlink on a web page.</p>
+        <p>With one click lets you view all the images in a given web page, then with a simple click you can host the images on yout new image hosting.</p>
+    </div>
+    
+    <div>
+    	<h2>How to do it</h2>
+        <p>Just edit the following code:</p>
+        <textarea readonly="readonly" rows="6">javascript:t='';for(var n=0;n<document.images.length;n++){t+='<a href=http://dev.chevereto.com/?url='+document.images[n].src+' target=\'_blank\' style=\'float: left; margin: 1em;\'><img border=0 src='+document.images[n].src+' /></a><br />'};if(t!=''){document.write('\<p\><div style=\'font-family: Arial, Helvetica, sans-serifl; font-size: 1.5em; background: #FFF; display: block; padding: .5em; margin: 0em auto 2em auto; border: 1px solid #CCC;\'>Click on the images and they will upload to DEV Chevereto <span style=\'color: #CCC;\'>in a new tab</span></div>\</p\>'+t+'');void(document.close())}else{alert('There is no images!')}</textarea>
+    </div>
+    
+    <div>
+    	<h2>How to provide this to your users</h2>
+        <p>It's as simple as creating a link pointing to the previous code. The text of your link which will be the bookmark of the user, it can even be a picture and accompanying text is the alt attribute of the same. For example, if you drag this link: <a href="javascript:t='';for(var n=0;n<document.images.length;n++){t+='<a href=http://dev.chevereto.com/?url='+document.images[n].src+' target=\'_blank\' style=\'float: left; margin: 1em;\'><img border=0 src='+document.images[n].src+' /></a><br />'};if(t!=''){document.write('\<p\><div style=\'font-family: Arial, Helvetica, sans-serifl; font-size: 1.5em; background: #FFF; display: block; padding: .5em; margin: 0em auto 2em auto; border: 1px solid #CCC;\'>Click on the images and they will upload to DEV Chevereto <span style=\'color: #CCC;\'>in a new tab</span></div>\</p\>'+t+'');void(document.close())}else{alert('There is no images!')}">Uplod to Dev Chevereto</a> to your bookmarks toolbar, you can see running on the spot.</p>
+    </div>
+
+</div>
+
+</body>
+
+</html>
